@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Weather App</h1>
+        
+        <!-- City Input Section -->
+        <div class="input-section">
+            <input type="text" id="cityInput" placeholder="Enter city name" />
+            <button id="getWeatherBtn">Get Weather</button>
+        </div>
+        
+        <!-- Unit Toggle Section -->
+        <div class="unit-toggle">
+            <label for="unitToggle">Unit:</label>
+            <select id="unitToggle">
+                <option value="metric">Celsius (°C)</option>
+                <option value="imperial">Fahrenheit (°F)</option>
+            </select>
+        </div>
+
+        <!-- Current Location Button -->
+        <button id="getLocationWeatherBtn">Get Current Location Weather</button>
+
+        <!-- Current Weather Display -->
+        <div class="weather-display" id="weatherDisplay">
+            <p class="temp" id="temperature"></p>
+            <p class="description" id="description"></p>
+            <img id="weatherIcon" src="weather.png" alt="Weather Icon" />
+        </div>
+
+        <!-- City Name Display -->
+        <p id="cityNameDisplay"></p>
+
+        <!-- Map Section -->
+        <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+
+        <div id="hourlyWeather" style="display: none;">
+            <h3>Hourly Forecast</h3>
+            <div id="hourlyList"></div>
+        </div>
+        
+        <!-- 5-Day Weather Forecast Section -->
+        <div class="forecast" id="forecast">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-list" id="forecastList"></div>
+        </div>
+
+        <!-- Error Message Section -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

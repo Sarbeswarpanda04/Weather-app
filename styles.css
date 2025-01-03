@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-weight: 400;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient Background */
+    color: #fff;
+    min-height: 100vh; /* Ensure the body covers at least the full screen */
+    display: flex; /* Enable flexbox layout */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+}
+
+.weather-app {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent Background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: #708090 2px 2px 2px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: #708090 2px 2px 2px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: yellowgreen;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #05b2f6;
+    outline: yellow;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    text-shadow: #708090 2px 2px 2px;
+}
+
+button:hover {
+    background-color: #6a11cb;
+}
+
+/* Unit Toggle Section */
+.unit-toggle {
+    margin-bottom: 20px;
+}
+
+.unit-toggle select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #05b2f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Current Weather Display Section */
+.weather-display {
+    margin: 0px 0 20px 0;
+}
+
+.temp {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: #708090 2px 2px 2px;
+}
+
+.description {
+    font-size: 50px;
+    text-shadow: #708090 2px 2px 2px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* City Name Display */
+#cityNameDisplay {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 2px;
+    text-shadow: #708090 2px 2px 2px;
+    color: #fefefe;
+    
+}
+
+/* Forecast Section */
+.forecast {
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.forecast-item {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    text-align: center;
+}
+
+.forecast-item img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Error Message */
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    display: none;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+
+/* For tablets and small screens (up to 768px) */
+@media (max-width: 768px) {
+    .weather-app {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .temp {
+        font-size: 48px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .input-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input[type="text"], button, .unit-toggle select {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .forecast-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast-item {
+        width: 90%;
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .forecast-list {
+        justify-content: center;
+    }
+}
+
+/* For mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    .weather-app {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .temp {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    input[type="text"], button, .unit-toggle select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .forecast-item {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+/* Add any new styles here if necessary */
+button {
+    margin-top: 5px; /* Make sure there's space between the buttons */
+}
+
+
+
+
+
+
+
+
+
+/* Default Background */
+body {
+    transition: background-color 0.5s ease, background-image 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Weather-Specific Backgrounds */
+body.sunny {
+    background-color: #FFD700; /* Example sunny color */
+    background-image: url('sunny.jpg.jpg');
+}
+
+body.cloudy {
+    background-color: #B0C4DE;
+    background-image: url('cloudy.jpg');
+}
+
+body.rainy {
+    background-color: #87CEEB;
+    background-image: url('rainy.jpg');
+}
+
+body.stormy {
+    background-color: #708090;
+    background-image: url('stormy.jpg');
+}
+
+body.snowy {
+    background-color: #FFF;
+    background-image: url('snowy.jpg');
+}
+
+body.default-weather {
+    background-color: #D3D3D3;
+    background-image: url('default.jpg');
+}
+
+
+/* Hourly weather */
+#hourlyWeather {
+    margin-top: 20px;
+}
+
+.hourly-item {
+    margin-bottom: 10px;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
